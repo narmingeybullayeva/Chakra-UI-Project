@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <Flex as='nav' p='10px' alignItems='center'>
+    <Flex  as='nav' mb='40px' p='10px' alignItems='center'>
         <Heading as='h1'>Task</Heading>
         <Spacer />
 
