@@ -1,10 +1,13 @@
 import { EditIcon, ViewIcon } from '@chakra-ui/icons';
-import { Card,Box, CardBody, CardFooter, CardHeader, Flex, Heading, SimpleGrid,Text, HStack, Button, Divider } from '@chakra-ui/react';
+import { Card,Box, CardBody, CardFooter, CardHeader, Flex, Heading, SimpleGrid,Text, HStack, Button, Divider, Avatar } from '@chakra-ui/react';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
 
 function Dashboard() {
 
-  const tasks = useLoaderData()
+  const useTasks = useLoaderData()
+
+  const [tasks, setTasks ] = useState(useTasks)
 
 
   return (
@@ -14,7 +17,7 @@ function Dashboard() {
               <CardHeader>
                 <Flex>
                   <Box w='50px' h='50px'>
-                    <Text>AV</Text>
+                    <Avatar src={task.img} />
                   </Box>
                   <Box>
                     <Heading as='h3' size='sm'>{task.title}</Heading>

@@ -19,7 +19,7 @@
       "title": "Update the contact form",
       "description": "The contact form is not working properly. We need to fix the form validation and make sure the form submissions are being sent to the correct email address.",
       "author": "Peach",
-      "img": "/img/peac.png"
+      "img": "/img/peach.png"
     },
     {
       "id": 4,
@@ -76,6 +76,12 @@
       "description": "We need to add more products to the online store. We also need to add categories and filters to make it easier for users to find what they are looking for.",
       "author": "Yoshi",
       "img": "/img/yoshi.png"
+    },
+    {
+      "id": "855c",
+      "title": "test",
+      "description": "test",
+      "isPriority": true
     }
   ]
 }

@@ -36,6 +36,21 @@ export const createAction = async ({request}) => {
     description: data.get('description'),
     isPriority: data.get('isPriority') === ''
   }
+  
+  let options = {
+    method: 'POST',
+    headers: {
+        'Content-Type':
+            'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(task)
+}
+
+let fetchRes = fetch("http://localhost:3000/tasks",options);
+    fetchRes.then(res =>res.json())
+    .then(data => {
+      console.log(data)
+  })
 
   console.log(task)
 
