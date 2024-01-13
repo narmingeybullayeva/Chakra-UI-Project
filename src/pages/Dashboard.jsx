@@ -1,5 +1,5 @@
 import { EditIcon, ViewIcon } from '@chakra-ui/icons';
-import { Card,Box, CardBody, CardFooter, CardHeader, Flex, Heading, SimpleGrid,Text, HStack, Button, Divider, Avatar } from '@chakra-ui/react';
+import { Card,Box,useColorModeValue, CardBody, CardFooter, CardHeader, Flex, Heading, SimpleGrid,Text, HStack, Button, Divider, Avatar } from '@chakra-ui/react';
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -9,11 +9,12 @@ function Dashboard() {
 
   const [tasks, setTasks ] = useState(useTasks)
 
-
+  const value = useColorModeValue('purple.400', 'purple.800')
+  const cardBgColor = useColorModeValue('white', 'gray.700')
   return (
     <SimpleGrid  spacing={10} minChildWidth='300px'>
           {tasks && tasks.map(task => (
-            <Card key={task.id} borderTop='8px' borderColor='purple.400' bg='white'>
+            <Card key={task.id} borderTop='8px' borderColor='purple.400' bg={cardBgColor}>
               <CardHeader>
                 <Flex>
                   <Box w='50px' h='50px'>
